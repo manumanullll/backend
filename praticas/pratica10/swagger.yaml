@@ -1,0 +1,19 @@
+/usuarios:
+  delete:
+    tags:
+      - usuarios
+    security:
+      - JWTAuth: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              usuario:
+                type: string
+            required:
+              - usuario
+    responses:
+      '204':
+        description: Usuário removido
